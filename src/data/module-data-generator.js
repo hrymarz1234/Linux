@@ -8,6 +8,9 @@ function shuffle(array) {
   return array;
 }
 
+function randomRaiting() {
+  return Math.floor( Math.random() * 10);
+}
 
 
 fs.readFile('src/lab01/data.txt','utf8',(err,data) => {
@@ -25,7 +28,8 @@ fs.readFile('src/lab01/data.txt','utf8',(err,data) => {
         id: (i /3) + 1,
         name: lines[i].trim(),
         age: lines[i + 1].trim(),
-        city: lines[i + 2].trim()
+        city: lines[i + 2].trim(),
+        rating: randomRaiting()
       });
     }
   }

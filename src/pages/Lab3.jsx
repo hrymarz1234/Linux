@@ -1,34 +1,15 @@
-import React from 'react';
-import FlexContainer from '../FlexContainer';
+import { data } from "../lab01/module-data.js";
+import FlexContainer from "../components/FlexContainer.jsx";
 
-const ItemComponent = ({ title }) => (
-  <div style={itemStyle}>{title}</div>
-);
 
-const itemStyle = {
-  padding: '10px',
-  background: '#f0f0f0',
-  border: '1px solid #ccc',
-  borderRadius: '4px',
-  textAlign: 'center',
-};
-
-const Lab3 = () => {
-  const data = [
-    { title: 'Element 1' },
-    { title: 'Element 2' },
-    { title: 'Element 3' },
-    { title: 'Element 4' },
-    { title: 'Element 5' },
-    { title: 'Element 6' },
-  ];
+function Lab3() {
+  
 
   return (
-    <div>
-      <h1>Lab 3 - Flex Container Example</h1>
-      <FlexContainer element={ItemComponent} data={data} />
-    </div>
+    <>
+      <FlexContainer key={data.id} element={data} ></FlexContainer>
+    </>
   );
-};
+}
 
 export default Lab3;

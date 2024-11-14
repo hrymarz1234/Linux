@@ -1,21 +1,29 @@
 #root {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background: radial-gradient(circle at top left, #1a1a40, #0d0d20);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  color: #d3d3d3; /* Ustawienie jasnoszarego koloru dla głównego tekstu */
 }
 
+/* Logo i efekty świetlne */
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  height: 9em;
+  padding: 1em;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s ease;
+  will-change: transform, filter;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 6em rgba(255, 215, 0, 0.8));
+  transform: scale(1.15) rotate(5deg);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 6em rgba(255, 165, 0, 0.8));
+  transform: scale(1.15) rotate(-5deg);
 }
 
 @keyframes logo-spin {
@@ -29,14 +37,33 @@
 
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+    animation: logo-spin infinite 8s linear;
   }
 }
 
+/* Styl dla kart */
 .card {
-  padding: 2em;
+  padding: 2.5em;
+  background: linear-gradient(145deg, rgba(30, 30, 70, 0.85), rgba(20, 20, 60, 0.85));
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  color: #d3d3d3; /* Ustawienie jasnoszarego koloru tekstu na kartach */
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4), inset 0 1px 3px rgba(255, 255, 255, 0.4);
 }
 
+/* Tekst i efekt hover */
 .read-the-docs {
-  color: #888;
+  color: #d3d3d3; /* Jasnoszary kolor tekstu */
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  transition: color 0.3s ease;
+}
+.read-the-docs:hover {
+  color: #f9d342; /* Efekt żółtego przy najechaniu */
 }

@@ -5,9 +5,9 @@ import Navbar from "react-bootstrap/Navbar";
 const NavBarMenu = ({items}) => {
   return (
     <>
-      <Navbar bg="light" data-bs-theme="light">
+      <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="#">Front</Navbar.Brand>
+          <Navbar.Brand href="#">Frameworki frontendowe</Navbar.Brand>
           <Nav className="me-auto">
           {items.map(item => (
             <Nav.Link key={item.id} href={`${item.url}`}>
