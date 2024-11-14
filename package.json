@@ -7,6 +7,7 @@
     "dev": "node src/data/module-data-generator.js && vite",
     "build": "vite build",
     "lint": "eslint .",
+    "start": "react-scripts start",
     "preview": "vite preview"
   },
   "dependencies": {
