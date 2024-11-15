@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "node src/data/module-data-generator.js && vite",
-    "build": "vite build",
+    "build": "node src/data/module-data-generator.js && vite build",
     "lint": "eslint .",
-    "start": "node src/data/module-data-generator.js && react-scripts start",
+    "start": " react-scripts start",
     "preview": "vite preview"
   },
   "dependencies": {
