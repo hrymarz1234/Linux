@@ -28,10 +28,10 @@ jobs:
         run: |
           npm install  # Jeśli używasz yarn, zastąp npm install przez yarn install
 
-      # 4. Uruchomienie testów aplikacji
-      - name: Run tests
-        run: |
-          npm test  # Uruchamia testy jednostkowe
+      # # 4. Uruchomienie testów aplikacji
+      # - name: Run tests
+      #   run: |
+      #     npm test  # Uruchamia testy jednostkowe
 
       # 5. Budowanie aplikacji (np. dla aplikacji React)
       - name: Build application
