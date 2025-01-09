@@ -1,26 +1,26 @@
 services:
-  frontend: # Definicja usługi frontendowej
+  frontend: # Definition of the frontend service
     build: 
-      context: . # Buduje obraz z bieżącego katalogu
-      dockerfile: Dockerfile # Używa pliku Dockerfile z bieżącego katalogu do budowy obrazu
-    container_name: frontend # Ustawia nazwę kontenera na "frontend"
+      context: . # Builds the image from the current directory
+      dockerfile: Dockerfile # Uses the Dockerfile from the current directory to build the image
+    container_name: frontend # Sets the container name to "frontend"
     ports:
-      - "5173:5173" # Mapuje port 5173 w kontenerze na port 5173 na hoście
+      - "5173:5173" # Maps port 5173 in the container to port 5173 on the host
     environment:
-      - VITE_APP_BACKEND_ADDRESS=http://backend:3000/api/data # Zmienna środowiskowa wskazująca adres backendu
+      - VITE_APP_BACKEND_ADDRESS=http://backend:3000/backend # Environment variable pointing to the backend address
     networks:
-      - network # Usługa jest podłączona do sieci o nazwie "network"
+      - network # The service is connected to the network named "network"
 
-  backend: # Definicja usługi backendowej
-    working_dir: /app # Ustawia katalog roboczy w kontenerze na "/app"
+  backend: # Definition of the backend service
+    working_dir: /app # Sets the working directory in the container to "/app"
     build:
-      context: ./backend # Buduje obraz Dockera z katalogu "./backend"
-    container_name: backend # Ustawia nazwę kontenera na "backend"
-    command: node server.js # Uruchamia polecenie `node server.js` przy starcie kontenera
+      context: ./backend # Builds the Docker image from the "./backend" directory
+    container_name: backend # Sets the container name to "backend"
+    command: node server.js # Runs the `node server.js` command when the container starts
     ports:
-      - "3000:3000" # Mapuje port 3000 w kontenerze na port 3000 na hoście
+      - "3000:3000" # Maps port 3000 in the container to port 3000 on the host
     networks:
-      - network # Usługa jest podłączona do sieci "network"
+      - network # The service is connected to the "network"
 
 networks:
-  network: # Definicja sieci, w której usługi mogą się komunikować
+  network: # Definition of the network that allows services to communicate
