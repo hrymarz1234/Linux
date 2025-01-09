@@ -1,0 +1,26 @@
+services:
+  frontend: # Definicja usługi frontendowej
+    build: 
+      context: . # Buduje obraz z bieżącego katalogu
+      dockerfile: Dockerfile # Używa pliku Dockerfile z bieżącego katalogu do budowy obrazu
+    container_name: frontend # Ustawia nazwę kontenera na "frontend"
+    ports:
+      - "5173:5173" # Mapuje port 5173 w kontenerze na port 5173 na hoście
+    environment:
+      - VITE_APP_BACKEND_ADDRESS=http://backend:3000/api/data # Zmienna środowiskowa wskazująca adres backendu
+    networks:
+      - network # Usługa jest podłączona do sieci o nazwie "network"
+
+  backend: # Definicja usługi backendowej
+    working_dir: /app # Ustawia katalog roboczy w kontenerze na "/app"
+    build:
+      context: ./backend # Buduje obraz Dockera z katalogu "./backend"
+    container_name: backend # Ustawia nazwę kontenera na "backend"
+    command: node server.js # Uruchamia polecenie `node server.js` przy starcie kontenera
+    ports:
+      - "3000:3000" # Mapuje port 3000 w kontenerze na port 3000 na hoście
+    networks:
+      - network # Usługa jest podłączona do sieci "network"
+
+networks:
+  network: # Definicja sieci, w której usługi mogą się komunikować

@@ -1,51 +1,15 @@
-John Doe
-32
-New York
+Jarolaw Kaczynski
+56
+Gdansk
 
-Jane Smith
+Milosz Stec
 28
-Los Angeles
+Warszawa
 
-Alice Brown
+Donald Tusk
 45
-Chicago
+Berlin
 
 Michael Johnson
-40
-Houston
-
-Elvis Presley
-35
-Phoenix
-
-Robert Wilson
-50
-Philadelphia
-
-Eren Yeager 
-19
-Wall Maria
-
-David Anderson
-29
-Dallas
-
-Joseph Joestar
-24
-Floryda
-
-Johnny Joestar
-43
-California
-
-Joshikata Joske
-16
-Morioch
-
-Michał Sroka
-22
-Rabka Zdrój
-
-Jolyne Kujo
-21
-Floryda
+33
+Phildelphia

@@ -5,9 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "node src/data/module-data-generator.js && vite",
-    "build": "node src/data/module-data-generator.js && vite build",
+    "build": "vite build",
     "lint": "eslint .",
-    "start": " react-scripts start",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -15,7 +14,6 @@
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18.3.1",
-    "react-hook-form": "^7.53.1",
     "react-router-dom": "^6.27.0"
   },
   "devDependencies": {

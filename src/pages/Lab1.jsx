@@ -1,3 +1,4 @@
+//import PersonProfile from './components/PersonProfile.jsx'
 import {data} from '../lab01/module-data.js'
 import PersonProfile from '../components/PersonProfile.jsx'
 

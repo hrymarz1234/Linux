@@ -8,6 +8,8 @@ RUN npm install
 
 COPY . .
 
-#EXPOSE 5173
+#  Vite default port 5173 
+EXPOSE 8080
 
+# Run the development server
 CMD ["npm", "run", "dev", "--", "--host"]
